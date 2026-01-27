@@ -245,6 +245,170 @@ let language = JSON.parse(`
             "c": ["é", false],
             "d": ["tem", false]
         }
-        ]
+    ],
+    [
+        {
+            "g": "Eu quero ___.",
+            "e": "I want food.",
+            "a": ["comida", true],
+            "b": ["bebida", false],
+            "c": ["dinheiro", false],
+            "d": ["mesa", false]
+        },
+        {
+            "g": "Eu estou com ___.",
+            "e": "I am hungry.",
+            "a": ["fome", true],
+            "b": ["sono", false],
+            "c": ["sede", false],
+            "d": ["frio", false]
+        },
+        {
+            "g": "Eu quero um ___.",
+            "e": "I want a coffee.",
+            "a": ["café", true],
+            "b": ["pão", false],
+            "c": ["suco", false],
+            "d": ["leite", false]
+        },
+        {
+            "g": "A conta, ___.",
+            "e": "The bill, please.",
+            "a": ["por favor", true],
+            "b": ["obrigado", false],
+            "c": ["desculpa", false],
+            "d": ["agora", false]
+        },
+        {
+            "g": "Quanto ___ isso?",
+            "e": "How much is this?",
+            "a": ["custa", true],
+            "b": ["come", false],
+            "c": ["fica", false],
+            "d": ["tem", false]
+        },
+        {
+            "g": "Eu compro no ___.",
+            "e": "I buy (things) at the supermarket.",
+            "a": ["mercado", true],
+            "b": ["hospital", false],
+            "c": ["banheiro", false],
+            "d": ["escola", false]
+        },
+        {
+            "g": "Eu como ___.",
+            "e": "I eat bread.",
+            "a": ["pão", true],
+            "b": ["água", false],
+            "c": ["café", false],
+            "d": ["suco", false]
+        },
+        {
+            "g": "Eu bebo ___.",
+            "e": "I drink water.",
+            "a": ["água", true],
+            "b": ["pão", false],
+            "c": ["arroz", false],
+            "d": ["comida", false]
+        },
+        {
+            "g": "O café está ___.",
+            "e": "The coffee is hot.",
+            "a": ["quente", true],
+            "b": ["frio", false],
+            "c": ["caro", false],
+            "d": ["longe", false]
+        },
+        {
+            "g": "Eu gosto de ___.",
+            "e": "I like coffee.",
+            "a": ["café", true],
+            "b": ["conta", false],
+            "c": ["mesa", false],
+            "d": ["mercado", false]
+        }
+    ],
+    [
+        {
+            "g": "Que horas ___?",
+            "e": "What time is it?",
+            "a": ["são", true],
+            "b": ["é", false],
+            "c": ["fica", false],
+            "d": ["tem", false]
+        },
+        {
+            "g": "Agora é ___.",
+            "e": "It is now.",
+            "a": ["agora", true],
+            "b": ["hoje", false],
+            "c": ["ontem", false],
+            "d": ["amanhã", false]
+        },
+        {
+            "g": "Hoje é ___.",
+            "e": "Today is today.",
+            "a": ["hoje", true],
+            "b": ["ontem", false],
+            "c": ["amanhã", false],
+            "d": ["agora", false]
+        },
+        {
+            "g": "Amanhã é ___.",
+            "e": "Tomorrow is tomorrow.",
+            "a": ["amanhã", true],
+            "b": ["hoje", false],
+            "c": ["ontem", false],
+            "d": ["agora", false]
+        },
+        {
+            "g": "Ontem foi ___.",
+            "e": "Yesterday was yesterday.",
+            "a": ["ontem", true],
+            "b": ["hoje", false],
+            "c": ["amanhã", false],
+            "d": ["agora", false]
+        },
+        {
+            "g": "Eu chego ___.",
+            "e": "I arrive now.",
+            "a": ["agora", true],
+            "b": ["ontem", false],
+            "c": ["amanhã", false],
+            "d": ["tarde", false]
+        },
+        {
+            "g": "Eu trabalho ___.",
+            "e": "I work today.",
+            "a": ["hoje", true],
+            "b": ["ontem", false],
+            "c": ["amanhã", false],
+            "d": ["agora", false]
+        },
+        {
+            "g": "Eu saio ___.",
+            "e": "I leave tomorrow.",
+            "a": ["amanhã", true],
+            "b": ["hoje", false],
+            "c": ["ontem", false],
+            "d": ["agora", false]
+        },
+        {
+            "g": "Agora ___ cedo.",
+            "e": "It is early now.",
+            "a": ["é", true],
+            "b": ["são", false],
+            "c": ["fica", false],
+            "d": ["tem", false]
+        },
+        {
+            "g": "Agora ___ tarde.",
+            "e": "It is late now.",
+            "a": ["é", true],
+            "b": ["são", false],
+            "c": ["fica", false],
+            "d": ["tem", false]
+        }
+    ]
 ]
 `);
