@@ -2,6 +2,7 @@
     Built in Keystrokes
     Built in Mouse hover and click
     Built in render pipeline
+    CHANGED TEXT ALIGN TO CENTER OF HITBOX
 */
 canvas = document.getElementById("myCanvas");
 c = canvas.getContext("2d");
