@@ -38,7 +38,7 @@ catch(error){
 mouseClicked(startUp)
 function drawDebugger(){
     selectColor("white");
-    text(`MX: ${mouse.x}, MY: ${mouse.y}, isCorrect: ${isCorrect}, Count: ${counter[0]}/${counter[1]}, I:${index}`,cx/2,cy-30,"40px Serif")
+    text(`MX: ${mouse.x}, MY: ${mouse.y}, isCorrect: ${isCorrect}, Count: ${counter[0]}/${counter[1]}, I:${index}, germ:${german.length}`,cx/2,cy-30,"40px Serif")
     text(`I/P: ${data.val}`,cx/2,cy-80,"40px Serif")
     circle(mouse.x,mouse.y,20)
     rect(storedPos[0],storedPos[1],mouse.x-storedPos[0],mouse.y-storedPos[1])
@@ -101,6 +101,9 @@ mouseClicked(()=>{
             }
         }
     }
+    if(isInside(mouse,{x:cx-320,y:cy-126-(i*modifier),width:310,height:116})){
+        history.back();
+    }
     if(isInside(mouse,{x:595+(310/2)+50,y:689+160,width:310,height:116})){
         if(isCorrect!=undefined){
             newQuestion();
@@ -117,7 +120,9 @@ mouseClicked(()=>{
 
 function draw(){
     bg('green')
+    selectColor("lightgreen");
     text("Neufrère",cx/2,100,"80px Serif")
+    selectColor("white");
     text(question[0],cx/2,400,"80px Serif")
     selectColor("lightgray");
     text(question[1],cx/2,450,"Italic 40px Serif")
@@ -143,6 +148,18 @@ function draw(){
     }
     if(debug){
         drawDebugger();
+    }
+    if(counter[1]>=german.length){
+        selectColor("white");
+        text("You're Done!",cx/2,200,"60px Serif");
+        selectColor("lightgreen")
+        text("You may go back, or continue practicing.!",cx/2,270,"Italic 40px Serif");
+        selectColor("white");
+        if(isInside(mouse,{x:cx-320,y:cy-126-(i*modifier),width:310,height:116})){selectColor("green")}
+        rect(cx-320,cy-126-(i*modifier),310,116);
+        selectColor("black")
+        text("Go Back to the",cx-320+(310/2),cy-126+38-(i*modifier),"Italic 30px Serif");
+        text("Home Page",cx-320+(310/2),cy-126+85-(i*modifier),"45px Serif");
     }
     selectColor("rgba(0,255,0,0.2)");
     if(counter[1]>0){text(Math.trunc((counter[0]/counter[1])*100)+"%",cx/2,cy-20,"Italic 45px Serif")}

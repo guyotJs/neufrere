@@ -18,7 +18,7 @@ let language = JSON.parse(`
             "d": ["tu", false]
         },
         {
-            "g": "___ good.",
+            "g": "___ bem.",
             "e": "I'm good.",
             "a": ["É", false],
             "b": ["Sou", false],
