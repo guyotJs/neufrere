@@ -66,10 +66,10 @@ function language(name,number,about,row,isBig){
 
 function render(){
     bg("green");
-    noStroke();
-    selectColor("rgba(10, 132, 10, 1)");
-    ellipse(0,cy,2000,500);
-    strokeActive();
+    // noStroke();
+    // selectColor("rgba(10, 132, 10, 1)");
+    // ellipse(0,cy,2000,500);
+    // strokeActive();
     selectColor("white");
     if(page=="secondary"){
         selectColor("lightgreen")
