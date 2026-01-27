@@ -409,6 +409,168 @@ let language = JSON.parse(`
             "c": ["fica", false],
             "d": ["tem", false]
         }
+    ],
+    [
+        {
+            "g": "Oi! Tudo ___?",
+            "e": "Hi! All good?",
+            "a": ["bem", true],
+            "b": ["bom", false],
+            "c": ["certo", false],
+            "d": ["ok", false]
+        },
+        {
+            "g": "Eu ___ bem.",
+            "e": "I am good.",
+            "a": ["estou", true],
+            "b": ["sou", false],
+            "c": ["fico", false],
+            "d": ["tenho", false]
+        },
+        {
+            "g": "Agora eu estou ___.",
+            "e": "Now I am calm.",
+            "a": ["tranquilo", true],
+            "b": ["cansado", false],
+            "c": ["fome", false],
+            "d": ["sono", false]
+        },
+        {
+            "g": "Onde ___ você agora?",
+            "e": "Where are you now?",
+            "a": ["está", true],
+            "b": ["fica", false],
+            "c": ["é", false],
+            "d": ["tem", false]
+        },
+        {
+            "g": "Eu estou ___ trabalho.",
+            "e": "I am at work.",
+            "a": ["no", true],
+            "b": ["em", false],
+            "c": ["para", false],
+            "d": ["com", false]
+        },
+        {
+            "g": "O café ___ perto.",
+            "e": "The café is nearby.",
+            "a": ["fica", true],
+            "b": ["está", false],
+            "c": ["é", false],
+            "d": ["tem", false]
+        },
+        {
+            "g": "Eu estou com ___.",
+            "e": "I am hungry.",
+            "a": ["fome", true],
+            "b": ["sede", false],
+            "c": ["sono", false],
+            "d": ["frio", false]
+        },
+        {
+            "g": "Eu quero um ___.",
+            "e": "I want a juice.",
+            "a": ["suco", true],
+            "b": ["pão", false],
+            "c": ["café", false],
+            "d": ["arroz", false]
+        },
+        {
+            "g": "Eu bebo ___.",
+            "e": "I drink coffee.",
+            "a": ["café", true],
+            "b": ["pão", false],
+            "c": ["arroz", false],
+            "d": ["comida", false]
+        },
+        {
+            "g": "Quanto ___ o café?",
+            "e": "How much is the coffee?",
+            "a": ["custa", true],
+            "b": ["come", false],
+            "c": ["fica", false],
+            "d": ["tem", false]
+        },
+        {
+            "g": "A conta, ___.",
+            "e": "The bill, please.",
+            "a": ["por favor", true],
+            "b": ["obrigado", false],
+            "c": ["desculpa", false],
+            "d": ["agora", false]
+        },
+        {
+            "g": "Eu compro no ___.",
+            "e": "I buy at the market.",
+            "a": ["mercado", true],
+            "b": ["banheiro", false],
+            "c": ["hospital", false],
+            "d": ["escola", false]
+        },
+        {
+            "g": "Que horas ___ agora?",
+            "e": "What time is it now?",
+            "a": ["são", true],
+            "b": ["é", false],
+            "c": ["fica", false],
+            "d": ["tem", false]
+        },
+        {
+            "g": "Agora é ___.",
+            "e": "It is now.",
+            "a": ["agora", true],
+            "b": ["hoje", false],
+            "c": ["amanhã", false],
+            "d": ["ontem", false]
+        },
+        {
+            "g": "Hoje eu trabalho ___.",
+            "e": "Today I work here.",
+            "a": ["aqui", true],
+            "b": ["ali", false],
+            "c": ["lá", false],
+            "d": ["onde", false]
+        },
+        {
+            "g": "Eu saio ___.",
+            "e": "I leave tomorrow.",
+            "a": ["amanhã", true],
+            "b": ["hoje", false],
+            "c": ["ontem", false],
+            "d": ["agora", false]
+        },
+        {
+            "g": "Agora ___ cedo.",
+            "e": "It is early now.",
+            "a": ["é", true],
+            "b": ["são", false],
+            "c": ["fica", false],
+            "d": ["tem", false]
+        },
+        {
+            "g": "Eu chego ___.",
+            "e": "I arrive late.",
+            "a": ["tarde", true],
+            "b": ["cedo", false],
+            "c": ["agora", false],
+            "d": ["ontem", false]
+        },
+        {
+            "g": "Onde ___ o banheiro?",
+            "e": "Where is the bathroom?",
+            "a": ["fica", true],
+            "b": ["está", false],
+            "c": ["é", false],
+            "d": ["tem", false]
+        },
+        {
+            "g": "Valeu! ___ mais.",
+            "e": "Thanks! See you later.",
+            "a": ["Até", true],
+            "b": ["Por", false],
+            "c": ["Com", false],
+            "d": ["Em", false]
+        }
     ]
 ]
 `);
