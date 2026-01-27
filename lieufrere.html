@@ -22,9 +22,6 @@
         #next{
             position:absolute;
         }
-        .bnfc{
-            background-color: rgba(239, 239, 239)!important;
-        }
     </style>
 </head>
 <body data="{question:'',subtext:'',options:[],next:false,complete:false}">
@@ -33,11 +30,11 @@
         <sub class="italic" react>{{subtext}}</sub>
         <br/><br>
         <div class="buttons">
-            <button onclick="answer(0)" id="one" class="no-border black bnfc p m w-full r hover-shadow" react>{{options[0][0]}}</button><br>
-            <button onclick="answer(1)" id="two" class="no-border black bnfc p m w-full r hover-shadow" react>{{options[1][0]}}</button><br>
-            <button onclick="answer(2)" id="three" class="no-border black bnfc p m w-full r hover-shadow" react>{{options[2][0]}}</button><br>
-            <button onclick="answer(3)" id="four" class="no-border black bnfc p m w-full r hover-shadow" react>{{options[3][0]}}</button>
-            <button onclick="next()" if="next" id="next" class="no-border black bnfc p m w-full r hover-shadow">Next Question</button>
+            <button onclick="answer(0)" id="one" class="no-border black p m w-full r hover-shadow" react>{{options[0][0]}}</button><br>
+            <button onclick="answer(1)" id="two" class="no-border black p m w-full r hover-shadow" react>{{options[1][0]}}</button><br>
+            <button onclick="answer(2)" id="three" class="no-border black p m w-full r hover-shadow" react>{{options[2][0]}}</button><br>
+            <button onclick="answer(3)" id="four" class="no-border black p m w-full r hover-shadow" react>{{options[3][0]}}</button>
+            <button onclick="next()" if="next" id="next" class="no-border black p m w-full r hover-shadow">Next Question</button>
         </div>
     </div>
     <div class="true-center container" if="complete">
@@ -49,6 +46,10 @@
         let german = language[0];
         let currentQuestion = 0;
         let qElements = [document.getElementById("one"),document.getElementById("two"),document.getElementById("three"),document.getElementById("four")];
+        for(let i=0;i<4;i++){
+            qElements[i].style.backgroundColor = "rgba(239, 239, 239)";
+            qElements[i].style.color = "black"; 
+        }
         function newQuestion(){
             let loc = german[currentQuestion];
             data.question = loc.g;
@@ -64,10 +65,10 @@
             data.next = false;
             currentQuestion ++;
             for(let i=0;i<4;i++){
-                qElements[i].style.backgroundColor = "rgb(239, 239, 239)";
+                qElements[i].style.backgroundColor = "rgba(239, 239, 239)";
                 qElements[i].style.color = "black"; 
             }
-                newQuestion();
+            newQuestion();
         }
         newQuestion();
         function answer(option){
@@ -79,7 +80,7 @@
             for(let i=0;i<4;i++){
                 console.log(locs[i][0]+" "+qElements[i].innerText)
                 for(let b=0;b<4;b++){
-                    if(qElements[i].innerHTML===locs[b][0]&&locs[b][1]){qElements[i].style.backgroundColor = "rgb(131, 204, 131)";}
+                    if(qElements[i].innerHTML==locs[b][0]&&locs[b][1]){qElements[i].style.backgroundColor = "rgb(131, 204, 131)"}
                 }
                 qElements[i].style.color = "white"; 
             }
