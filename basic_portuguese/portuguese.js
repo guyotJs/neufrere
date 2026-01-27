@@ -516,7 +516,7 @@ let language = JSON.parse(`
             "d": ["tem", false]
         },
         {
-            "g": "Agora é ___.",
+            "g": "É ___.",
             "e": "It is now.",
             "a": ["agora", true],
             "b": ["hoje", false],
@@ -540,8 +540,8 @@ let language = JSON.parse(`
             "d": ["agora", false]
         },
         {
-            "g": "Agora ___ cedo.",
-            "e": "It is early now.",
+            "g": "___ cedo.",
+            "e": "It is early.",
             "a": ["é", true],
             "b": ["são", false],
             "c": ["fica", false],
