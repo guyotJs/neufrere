@@ -79,7 +79,7 @@
             for(let i=0;i<4;i++){
                 console.log(locs[i][0]+" "+qElements[i].innerText)
                 for(let b=0;b<4;b++){
-                    if(qElements[i].innerHTML==locs[b][0]&&locs[b][1]){qElements[i].style.backgroundColor = "rgb(131, 204, 131)";alert("correct");}
+                    if(qElements[i].innerHTML===locs[b][0]&&locs[b][1]){qElements[i].style.backgroundColor = "rgb(131, 204, 131)";}
                 }
                 qElements[i].style.color = "white"; 
             }
