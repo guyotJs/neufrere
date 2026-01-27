@@ -1,0 +1,21 @@
+.full-btn{
+    width:300px;
+}
+.container{
+    min-width:300px;
+}
+.hover-shadow:hover{
+    box-shadow:0px 0px 10px rgba(0, 0, 0, 0.277);
+}
+.buttons{
+    position: relative;
+}
+#next{
+    position:absolute;
+}
+.small-btn{
+    width: 143px;
+}
+a{
+    all:unset;
+}

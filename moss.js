@@ -236,6 +236,6 @@ function useKeys(){
   playerMove();
 }
 function main(){
-    requestAnimationFrame(main)
-    render()
+    requestAnimationFrame(main);
+    render();
 };main();

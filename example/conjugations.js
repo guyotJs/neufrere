@@ -1,15 +1,18 @@
-let pre = "Write Here...";
-
-let pro = [
-    ["I", "___"],
-    ["You", "___"],
-    ["He / She", "___"],
-    ["We", "___"],
-    ["You pl.", "___"],
-    ["They", "___"]
-];
-
-let pres = [
-  [["to ___", "___"], ["___", "___", "___", "___", "___", "___"]],
-  [["to ___", "___"], ["___", "___", "___", "___", "___", "___"]]
+let pre, pro, pres;
+function setConjugation(number){
+  pre = cons[number].pre;
+  pro = cons[number].pro;
+  pres = cons[number].pres;
+}
+let cons = [
+  {
+    pre:"Write Here...", 
+    pro:[
+      ["___", "___"],
+    ],
+    pres:[
+      [["to ___", "___"], ["___", "___", "___", "___", "___", "___"]]
+    ]
+  }
 ]
+
