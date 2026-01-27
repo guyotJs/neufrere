@@ -163,6 +163,88 @@ let language = JSON.parse(`
             "c": ["certo", false],
             "d": ["ok", false]
         }
-    ]
+    ],
+    [
+        {
+            "g": "Onde ___ você?",
+            "e": "Where are you?",
+            "a": ["está", true],
+            "b": ["é", false],
+            "c": ["fica", false],
+            "d": ["tem", false]
+        },
+        {
+            "g": "Onde ___ o banheiro?",
+            "e": "Where is the bathroom?",
+            "a": ["fica", true],
+            "b": ["está", false],
+            "c": ["é", false],
+            "d": ["tem", false]
+        },
+        {
+            "g": "Eu estou ___.",
+            "e": "I am here.",
+            "a": ["aqui", true],
+            "b": ["ali", false],
+            "c": ["lá", false],
+            "d": ["onde", false]
+        },
+        {
+            "g": "Eu estou ___.",
+            "e": "I am there (near).",
+            "a": ["ali", true],
+            "b": ["aqui", false],
+            "c": ["lá", false],
+            "d": ["onde", false]
+        },
+        {
+            "g": "Eu estou ___.",
+            "e": "I am there (far).",
+            "a": ["lá", true],
+            "b": ["aqui", false],
+            "c": ["ali", false],
+            "d": ["onde", false]
+        },
+        {
+            "g": "Onde ___ a escola?",
+            "e": "Where is the school?",
+            "a": ["fica", true],
+            "b": ["está", false],
+            "c": ["é", false],
+            "d": ["tem", false]
+        },
+        {
+            "g": "O mercado fica ___.",
+            "e": "The market is here.",
+            "a": ["aqui", true],
+            "b": ["ali", false],
+            "c": ["lá", false],
+            "d": ["onde", false]
+        },
+        {
+            "g": "Onde ___ isso?",
+            "e": "Where is this?",
+            "a": ["fica", true],
+            "b": ["está", false],
+            "c": ["é", false],
+            "d": ["tem", false]
+        },
+        {
+            "g": "Eu estou ___ casa.",
+            "e": "I am at home.",
+            "a": ["em", true],
+            "b": ["no", false],
+            "c": ["na", false],
+            "d": ["para", false]
+        },
+        {
+            "g": "Onde você ___ agora?",
+            "e": "Where are you now?",
+            "a": ["está", true],
+            "b": ["fica", false],
+            "c": ["é", false],
+            "d": ["tem", false]
+        }
+        ]
 ]
 `);
