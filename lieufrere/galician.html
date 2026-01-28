@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lieufrère</title>
+    <link rel="stylesheet" href="https://guyotjs.github.io/bcss/bc.css">
+    <link rel="shortcut icon" href="https://guyotjs.github.io/duckclear2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./global.css">
+</head>
+<body data="{question:'',subtext:'',options:[],next:false,complete:false}">
+    <div class="true-center container" if="!complete">
+        <h1 class="sans no-bold" react>{{question}}</h1>
+        <sub class="italic" react>{{subtext}}</sub>
+        <br/><br>
+        <div class="buttons">
+            <button onclick="answer(0)" id="one" class="no-border full-btn black p m w-full r hover-shadow" react>{{options[0][0]}}</button><br>
+            <button onclick="answer(1)" id="two" class="no-border full-btn black p m w-full r hover-shadow" react>{{options[1][0]}}</button><br>
+            <button onclick="answer(2)" id="three" class="no-border full-btn black p m w-full r hover-shadow" react>{{options[2][0]}}</button><br>
+            <button onclick="answer(3)" id="four" class="no-border full-btn black p m w-full r hover-shadow" react>{{options[3][0]}}</button><br>
+            <button onclick="next()" if="next" id="next" class="no-border full-btn black p m w-full r hover-shadow">Next Question</button>
+        </div>
+    </div>
+    <div class="true-center container" if="complete">
+        <h1 class="sans no-bold">You have completed every question.</h1>
+    </div>
+    <script src='https://snojs.github.io/sno/crystal.js'></script>
+    <script src='https://guyotjs.github.io/neufrere/galician/lang.js'></script>
+    <script>
+        let german = language[0];
+        let currentQuestion = 0;
+        let qElements = [document.getElementById("one"),document.getElementById("two"),document.getElementById("three"),document.getElementById("four")];
+        for(let i=0;i<4;i++){
+            qElements[i].style.backgroundColor = "rgba(239, 239, 239)";
+            qElements[i].style.color = "black"; 
+        }
+        function newQuestion(){
+            let loc = german[currentQuestion];
+            data.question = loc.g;
+            data.subtext = loc.e;
+            data.options = [
+                [loc.a[0],loc.a[1]],
+                [loc.b[0],loc.b[1]],
+                [loc.c[0],loc.c[1]],
+                [loc.d[0],loc.d[1]],
+            ].sort(()=>Math.random()-0.5);
+        }
+        function next(){
+            data.next = false;
+            currentQuestion ++;
+            for(let i=0;i<4;i++){
+                qElements[i].style.backgroundColor = "rgba(239, 239, 239)";
+                qElements[i].style.color = "black"; 
+            }
+            newQuestion();
+        }
+        newQuestion();
+        function answer(option){
+            if(currentQuestion>=german.length){
+                data.complete = true;
+            }
+            let loc = german[currentQuestion];
+            let locs = [loc.a,loc.b,loc.c,loc.d];
+            for(let i=0;i<4;i++){
+                console.log(locs[i][0]+" "+qElements[i].innerText)
+                for(let b=0;b<4;b++){
+                    if(qElements[i].innerHTML==locs[b][0]&&locs[b][1]){qElements[i].style.backgroundColor = "rgb(131, 204, 131)"}
+                }
+                qElements[i].style.color = "white"; 
+            }
+            data.next = true;
+        }
+    </script>
+</body>
+</html>
