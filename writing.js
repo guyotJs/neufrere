@@ -69,11 +69,11 @@ function draw(){
         }
         rect(595+(310/2)+50,689+160,310,116);
         selectColor("black");
-        if(isTrue){text("Continue",595+(310/2)+50+(310/2),689+160+75,"60px Serif");}
-        if(!isTrue){
+        // if(isTrue){text("Continue",595+(310/2)+50+(310/2),689+160+75,"60px Serif");}
+        // if(!isTrue){
             text("Continue",595+(310/2)+50+(310/2),689+160+47,"40px Serif");
             text("\""+currentWord[0]+"\"",595+(310/2)+50+(310/2),689+160+93,"Italic 40px Serif");
-        }
+        // }
     }
 
     selectColor("green");

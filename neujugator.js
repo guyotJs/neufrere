@@ -8,6 +8,12 @@ function random(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function removeAccents(str) {
+  return str
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
 let conjugationTypes = pro.length;
 let isTrue = undefined;
 let isDone = false;
@@ -29,7 +35,7 @@ document.addEventListener('keydown', function(event) {
         let trueScribe = data.val;
         trueScribe = trueScribe.toLowerCase();
         isDone = true;
-        if(trueScribe==pres[currentVerb][1][currentType]){
+        if(removeAccents(trueScribe)==removeAccents(pres[currentVerb][1][currentType])){
             isTrue = true;
         }else{isTrue = false;}
     }else if(event.key==='Enter'&&isTrue!=undefined){
@@ -56,6 +62,7 @@ function draw(){
     if(data.val==""){text(pre,cx/2,cy/2+85,"Italic 60px Serif");}
     else{text(data.val,cx/2,cy/2+85,"Italic 60px Serif");}
     
+    // This was "if(isTrue)" but I'm changing it to always
     if(isDone){
         selectColor("lightgray");
         if(isInside(mouse,{x:595+(310/2)+50,y:689+160,width:310,height:116})){
@@ -63,11 +70,11 @@ function draw(){
         }
         rect(595+(310/2)+50,689+160,310,116);
         selectColor("black");
-        if(isTrue){text("Continue",595+(310/2)+50+(310/2),689+160+75,"60px Serif");}
-        if(!isTrue){
+        // if(isTrue){text("Continue",595+(310/2)+50+(310/2),689+160+75,"60px Serif");}
+        // if(!isTrue){
             text("Continue",595+(310/2)+50+(310/2),689+160+47,"40px Serif");
             text("\""+pres[currentVerb][1][currentType]+"\"",595+(310/2)+50+(310/2),689+160+93,"Italic 40px Serif");
-        }
+        // }
     }
 
     selectColor("green");
